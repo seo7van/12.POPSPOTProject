@@ -120,7 +120,9 @@ const Main = ({setTag}) => {
 
       <section className="list_container">
         <h2 className='list_main_name'>POP IN POP-UP</h2>
-        <h2 class="rotated_background_text">POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT</h2>
+          <div class="rotated_background_wrapper">
+            <h2 class="rotated_background_text">POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT POPSPOT</h2>
+          </div>
         <div className="list_items"> 
           <div className="list_btn_container">
             <button className="list_btn" onClick={() => prevList()}>&lt;</button>
