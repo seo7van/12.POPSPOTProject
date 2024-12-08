@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Freesentation-9Black';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard-Regular' sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
