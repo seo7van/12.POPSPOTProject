@@ -1,0 +1,156 @@
+/* EventEdit.css */
+
+.event-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #FFFFFF; /* 주조색 */
+  border: 1px solid #1F2933; /* 보조색 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-container h1 {
+  font-size: 2.4rem;
+  color: #1F2933; /* 보조색 */
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.event-container h3 {
+  color: #006EB9; /* 강조색 */
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.event-container input,
+.event-container textarea,
+.event-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #1F2933; /* 보조색 */
+  box-sizing: border-box;
+}
+
+.event-container textarea {
+  height: 150px;
+  resize: vertical; /* 높이 조정 가능 */
+}
+
+.event-container .event-detail-item {
+  padding: 10px 0;
+  border-bottom: 2px dashed #006EB9; /* 강조색 */
+}
+
+.event-container .event-detail-item:last-child {
+  border-bottom: none;
+}
+
+.event-container .event-submit-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2%;
+}
+
+.event-container .event-submit-time {
+  -webkit-appearance: none; /* 크롬 화살표 없애기 */
+  -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+  appearance: none; /* 화살표 없애기 */
+  text-align-last: center;
+  min-width: 50px;
+  border: 1px solid #1F2933; /* 보조색 */
+  background-color: #FFFFFF; /* 주조색 */
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.event-container .event-submit-time:focus {
+  border-color: #006EB9; /* 강조 */
+}
+
+.event-container #map {
+  width: 100%;
+  height: 350px;
+  margin-top: 10px;
+  display: none;
+  border: 1px solid #1F2933;
+}
+
+.event-container button {
+  padding: 10px 20px;
+  background-color: #f06565;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.event-container button:hover {
+  background-color: #e63939;
+}
+
+.event-container .tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 2px dashed #006EB9;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.event-container .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #006EB9;
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.event-container .tag button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.event-container .tag button:hover {
+  color: #FF4D4D;
+}
+
+.event-container .date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .event-container {
+    padding: 20px;
+  }
+
+  .event-container h1 {
+    font-size: 2rem;
+  }
+
+  .event-container p {
+    font-size: 1rem;
+  }
+}

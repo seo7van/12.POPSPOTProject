@@ -1,0 +1,144 @@
+/* 메인감싸는거 */
+figure {
+    position: relative;
+    height: 700px;
+    margin: 0;
+}
+
+/* 메인 전체 */
+.main_container {
+    justify-content: center;
+}
+
+/* 메인 이미지 */
+.main_image {
+    position: relative;
+    width: 80%;
+    height: 700px;
+    object-fit: cover; /* 비율 유지하며 잘라냄 */
+    margin: auto;
+    display: block;
+    animation: slide-left 5s infinite; /* 슬라이드 애니메이션 적용 */
+}
+
+/* 슬라이드 애니메이션 */
+@keyframes slide-left {
+    0% {
+      transform: translateX(100%); /* 오른쪽 화면 밖에서 시작 */
+      opacity: 0;
+    }
+    10%,
+    90% {
+      transform: translateX(0); /* 화면 중앙 */
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%); /* 왼쪽 화면 밖으로 나감 */
+      opacity: 0;
+    }
+}
+
+/*
+.overlay_main_text {
+    position: absolute;
+    top: 20%;
+    bottom: 100px; 
+    left: 2%;
+    color: white;
+    text-align: left;
+    transform: none;
+}
+    .overlay_main_title {
+        font-family: 'Freesentation-9Black';
+        margin: 15px;
+        font-size: 60px;
+    }
+    .overlay_main_detail {
+        margin: 20px;
+        background-Color:#006EB9;
+        display: inline;
+    }
+*/
+    
+/* 제목, 부제목 전체 */
+.overlay_text {
+    position: relative;
+    bottom: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Freesentation';
+}
+
+    /* 제목 */
+    .overlay_title {
+        font-weight: 900;
+        font-size: 30px;
+        color: white;
+        margin: 15px;
+    }
+
+    /* 부제목 */
+    .overlay_detail {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+/* 메인 이미지 좌우 넘김 버튼 */
+.main_button_container {
+    position: absolute;
+    display: flex; 
+    transform: translateY(-50%);
+    top: 50%; 
+    left: 0; 
+    right: 0; 
+    justify-content: space-between; 
+    padding: 0 200px; 
+}
+
+/* 버튼 스타일 */
+.main_toggle_button {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: calc(1rem + 1vw);
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Malgun Gothic';
+}
+
+/* 버튼 호버(눌렀을때) 효과 */
+.main_toggle_button:hover {
+    color: #006EB9;
+    transition: color 0.3s ease;
+}
+
+/* 인디케이터 컨테이너 */
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+  
+/* 인디케이터 스타일 */
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1f293334;
+    transition: background-color 0.3s ease;
+}
+    /* 인디케이터 색 */
+    .indicator.active {
+        background-color: #006EB9;
+    }
